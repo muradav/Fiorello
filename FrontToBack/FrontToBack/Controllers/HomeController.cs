@@ -24,7 +24,12 @@ namespace FrontToBack.Controllers
             homeVM.SliderContent = _context.SliderContents.FirstOrDefault();
             homeVM.Categories = _context.Categories.ToList();
             homeVM.Products = _context.Products.Include(p=>p.Category).ToList();
-
+            homeVM.AboutImage = _context.AboutImages.FirstOrDefault();
+            homeVM.AboutContent = _context.AboutContents.FirstOrDefault();
+            homeVM.Experts=_context.Experts.ToList();
+            homeVM.Blogs = _context.Blogs.ToList();
+            homeVM.Florists = _context.Florists.ToList();
+            homeVM.SocialAddressFlorists = _context.SocialAddressFlorists.ToList();
 
             return View(homeVM);
         }
