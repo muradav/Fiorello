@@ -21,6 +21,7 @@ namespace FrontToBack.DAL
         public DbSet<Blog> Blogs { get; set; }
         public DbSet<Florist> Florists { get; set; }
         public DbSet<SocialAddressFlorist> SocialAddressFlorists { get; set; }
+        public DbSet<Bio> Bios { get; set; }
 
     }
 }
