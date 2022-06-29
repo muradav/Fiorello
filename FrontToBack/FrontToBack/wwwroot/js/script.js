@@ -25,6 +25,28 @@ $(document).ready(function () {
         $(this).parent().next().slideToggle();
     })
 
+    //Load More
+    let skip = 2;
+    $(document).on('click', '#loadMore', function () {
+        
+        let productList = $("#productList");
+        let productCount = $("#productCount").val();
+        $.ajax({
+            url: "/product/loadMore?skip="+skip,
+            method: "get",
+            success: function (res) {
+                productList.append(res);
+                skip += 2;
+                if (skip >= productCount) {
+                    $("#loadMore").remove();
+                }
+            }
+        })
+
+    })
+
+
+
     // SLIDER
 
     $(document).ready(function(){

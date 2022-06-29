@@ -55,6 +55,13 @@ namespace FrontToBack
                     "{controller=home}/{action=index}/{Id?}"
                     );
             });
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllerRoute(
+                    "default",
+                    "{controller=product}/{action=index}/{Id?}"
+                    );
+            });
         }
     }
 }
