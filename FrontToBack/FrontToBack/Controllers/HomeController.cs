@@ -33,5 +33,17 @@ namespace FrontToBack.Controllers
 
             return View(homeVM);
         }
+
+        public IActionResult SearchProduct(string search)
+        {
+            List<Product> products = _context.Products
+                .Include(p => p.Category)
+                .OrderBy(p => p.Id)
+                .Where(p => p.Name.ToLower()
+                .Contains(search.ToLower()))
+                .Take(5)
+                .ToList();
+            return PartialView("_SearchPartial",products);
+        }
     }
 }

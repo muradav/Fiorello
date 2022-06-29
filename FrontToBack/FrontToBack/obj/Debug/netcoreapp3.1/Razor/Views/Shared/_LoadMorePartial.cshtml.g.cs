@@ -27,7 +27,7 @@ using FrontToBack.ViewModels;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"311cc26025de9b9ce8e9b2fc386f1ea7ef77f170", @"/Views/Shared/_LoadMorePartial.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"2f4ac931d5edb120660d7139af0f0a8b325eff0e", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"86c30d05ecf3fc0053e5548247a0098d13855844", @"/Views/_ViewImports.cshtml")]
     #nullable restore
     public class Views_Shared__LoadMorePartial : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<List<Product>>
     #nullable disable

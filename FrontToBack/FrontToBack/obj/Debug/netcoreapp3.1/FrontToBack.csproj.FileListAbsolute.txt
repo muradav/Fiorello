@@ -251,3 +251,4 @@ C:\Users\HP\Desktop\FrontToBack\FrontToBack\FrontToBack\obj\Debug\netcoreapp3.1\
 C:\Users\HP\Desktop\Development\FrontToBack\FrontToBack\FrontToBack\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LoadMorePartial.cshtml.g.cs
 C:\Users\HP\Desktop\Development\FrontToBack\FrontToBack\FrontToBack\obj\Debug\netcoreapp3.1\Razor\Views\Product\Index.cshtml.g.cs
 C:\Users\HP\Desktop\Development\FrontToBack\FrontToBack\FrontToBack\obj\Debug\netcoreapp3.1\Razor\Views\Product\LoadMore.cshtml.g.cs
+C:\Users\HP\Desktop\Development\FrontToBack\FrontToBack\FrontToBack\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_SearchPartial.cshtml.g.cs
