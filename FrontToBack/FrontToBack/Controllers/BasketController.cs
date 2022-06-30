@@ -91,8 +91,8 @@ namespace FrontToBack.Controllers
         {
             string basket = Request.Cookies["basket"];
             List<BasketVM> products = JsonConvert.DeserializeObject<List<BasketVM>>(basket);
-            BasketVM deletePro = products.Find(p => p.Id == id);
-            products.Remove(deletePro);
+            BasketVM deleteProduct = products.Find(p => p.Id == id);
+            products.Remove(deleteProduct);
             Response.Cookies.Append("basket", JsonConvert.SerializeObject(products));
             return RedirectToAction("showitem", "basket");
         }
@@ -100,10 +100,10 @@ namespace FrontToBack.Controllers
         {
             string basket = Request.Cookies["basket"];
             List<BasketVM> products = JsonConvert.DeserializeObject<List<BasketVM>>(basket);
-            BasketVM plusPro = products.Find(p => p.Id == id);
-            if (plusPro.Count < 10)
+            BasketVM plusProduct = products.Find(p => p.Id == id);
+            if (plusProduct.Count < 10)
             {
-                plusPro.Count++;
+                plusProduct.Count++;
             }
             Response.Cookies.Append("basket", JsonConvert.SerializeObject(products));
             return RedirectToAction("showitem", "basket");
@@ -113,14 +113,14 @@ namespace FrontToBack.Controllers
         {
             string basket = Request.Cookies["basket"];
             List<BasketVM> products = JsonConvert.DeserializeObject<List<BasketVM>>(basket);
-            BasketVM minusPro = products.Find(p => p.Id == id);
-            if (minusPro.Count > 1)
+            BasketVM minusProduct = products.Find(p => p.Id == id);
+            if (minusProduct.Count > 1)
             {
-                minusPro.Count--;
+                minusProduct.Count--;
             }
             else
             {
-                products.Remove(minusPro);
+                products.Remove(minusProduct);
             }
             Response.Cookies.Append("basket", JsonConvert.SerializeObject(products));
             return RedirectToAction("showitem", "basket");
