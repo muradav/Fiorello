@@ -56,5 +56,13 @@ namespace FrontToBack.Controllers
             List<Product> products = _context.Products.Skip(skip).Take(2).Include(p=>p.Category).ToList();
             return PartialView("_LoadMorePartial",products);
         }
+
+        public IActionResult Detail(int? id)
+        {
+            if (id == null) return NotFound();
+            Product dbProduct = _context.Products.FirstOrDefault(p => p.Id == id);
+            if (dbProduct == null) return NotFound();
+            return View(dbProduct);
+        }
     }
 }
