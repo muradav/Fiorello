@@ -1,0 +1,33 @@
+﻿@model Category  
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Areas/AdminPanel/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="row">
+     <div class="col-12 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">Create Category Form</h4>
+                    <form class="forms-sample" method="post">
+                      <div class="form-group">
+                        <label asp-for="Name"></label>
+                        <input asp-for="Name" class="form-control" placeholder="Name">
+                        <span asp-validation-for="Name" class="text-danger pt-4"></span>
+                      </div>
+
+                      <div class="form-group">
+                        <label asp-for="Desc">Description</label>
+                        <textarea asp-for="Desc" class="form-control" rows="4"></textarea>
+                        <span asp-validation-for="Desc" class="text-danger pt-4"></span>
+                      </div>
+
+                      <button type="submit" class="btn btn-primary me-2">Submit</button>
+                      <a class="btn btn-light" asp-action="index">Cancel</a>
+                    </form>
+                  </div>
+                </div>
+              </div>
+</div>
+

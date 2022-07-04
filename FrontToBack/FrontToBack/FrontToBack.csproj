@@ -25,4 +25,29 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="wwwroot\admin\css\style.css.map" />
+    <None Include="wwwroot\admin\fonts\Ubuntu\Ubuntu-Bold.woff2" />
+    <None Include="wwwroot\admin\fonts\Ubuntu\Ubuntu-Light.woff2" />
+    <None Include="wwwroot\admin\fonts\Ubuntu\Ubuntu-Medium.woff2" />
+    <None Include="wwwroot\admin\fonts\Ubuntu\Ubuntu-Regular.woff2" />
+    <None Include="wwwroot\admin\images\dashboard\circle.svg" />
+    <None Include="wwwroot\admin\images\logo-mini.svg" />
+    <None Include="wwwroot\admin\images\logo.svg" />
+    <None Include="wwwroot\admin\js\chart.js" />
+    <None Include="wwwroot\admin\js\dashboard.js" />
+    <None Include="wwwroot\admin\js\file-upload.js" />
+    <None Include="wwwroot\admin\js\hoverable-collapse.js" />
+    <None Include="wwwroot\admin\js\jquery.cookie.js" />
+    <None Include="wwwroot\admin\js\misc.js" />
+    <None Include="wwwroot\admin\js\off-canvas.js" />
+    <None Include="wwwroot\admin\js\todo.js" />
+    <None Include="wwwroot\admin\js\todolist.js" />
+    <None Include="wwwroot\admin\vendors\chart.js\Chart.min.js" />
+    <None Include="wwwroot\admin\vendors\js\bootstrap.min.js.map" />
+    <None Include="wwwroot\admin\vendors\js\vendor.bundle.base.js" />
+    <None Include="wwwroot\admin\vendors\mdi\css\materialdesignicons.min.css.map" />
+    <None Include="wwwroot\admin\vendors\mdi\fonts\materialdesignicons-webfont.woff2" />
+  </ItemGroup>
+
 </Project>
