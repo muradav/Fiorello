@@ -29,13 +29,30 @@ namespace FrontToBack.Areas.AdminPanel.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create(Category category)
+        public async Task<IActionResult> Create(Category category)
         {
             if (!ModelState.IsValid)
             {
                 return View();
             }
-            return Content($"{category.Name} {category.Desc}");
+
+            bool existNameCategory = _context.Categories.Any(c => c.Name.ToLower() == category.Name.ToLower());
+            if (existNameCategory)
+            {
+                ModelState.AddModelError("Name", "This category is exist");
+                return View();
+            }
+
+            Category newCategory = new Category
+            {
+                Name = category.Name,
+                Desc = category.Desc
+            };
+
+            await _context.Categories.AddAsync(newCategory);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction("Index");
         }
 
         public async Task<IActionResult> Detail(int? id)
@@ -43,6 +60,15 @@ namespace FrontToBack.Areas.AdminPanel.Controllers
             if (id == null) return NotFound();
             Category dbCategory = await _context.Categories.FindAsync(id);
             if(dbCategory==null) return NotFound();
+
+            return View(dbCategory);
+        }
+
+        public async Task<IActionResult> Update(int? id)
+        {
+            if (id == null) return NotFound();
+            Category dbCategory = await _context.Categories.FindAsync(id);
+            if (dbCategory == null) return NotFound();
 
             return View(dbCategory);
         }
